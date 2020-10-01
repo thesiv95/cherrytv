@@ -1,0 +1,61 @@
+<!-- 
+    I used Live Sass Compiler and Live Server plugins for VSCode.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cherry.tv</title>
+    <!-- I use sass, everything is rendered in a single file. I do not want to include more than one css file because that will be not optimized. Also css is compressed and filled with browsers' prefixes. -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+      <!-- BEM class naming. That's why I use sass (it's convenient to write these type of styles naming using this preprocessor). -->
+    <div class="container">
+      <div class="logo">
+        <img class="logo_image" src="img/logo.png" alt="Cherry.tv" />
+      </div>
+      <div class="poster">
+        <!-- CSS trick - this img is shown in mobile version only -->
+        <img class="poster_image" src="img/bg_mobile_1.png" alt="Come on! ;)">
+      </div>
+      <div class="interaction">
+        <div class="interaction__lock">
+          <img
+            class="interaction__lock_image"
+            src="img/gold_shape_with_img.png"
+            alt="Girls are waiting for you ;)"
+          />
+          <!-- ^ imagine the pic did not load. But we need to continue to interact with our user, so I decided to write some pleasant text for him (or her) in 'alt' attribute! -->
+        </div>
+        <div class="interaction__title">
+          <h1 class="interaction__title_text">You bring the fantasies,</h1>
+        </div>
+        <div class="interaction__subtitle">
+            <!-- Styles for each para a bit different, and I think it is not 100% good to just use for example h1/span and br. So I used tag p, each with own styles. -->
+          <p class="interaction__subtitle_text">
+            We bring the girls with </p>
+            <p class="interaction__subtitle_text interaction__subtitle_text--bottom"> something
+            <strong class="interaction__subtitle_text_bold">extra!</strong></p>
+          </h2>
+        </div>
+        <div class="interaction__shine">
+          <img
+            class="interaction__shine_image"
+            src="img/shine.png"
+            alt="So what are you waiting for? ;)"
+          />
+        </div>
+        <div class="interaction__more">
+          <!-- or <a href="..." with the same class -->
+          <button class="interaction__more_button">
+            Click to discover more
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Actually I didn't need to use JS, just made a simple script to make sure it works properly. -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

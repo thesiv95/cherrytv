@@ -1,0 +1,30 @@
+// Fonts. 'Poppins' from google fonts, 'Helvetica Neue' from the external file.
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap')
+@font-face
+    font-family: 'Helvetica Neue Bold'
+    src: url('../fonts/HelveticaNeueCyr-Bold.ttf')
+
+// CSS reset tool. I could use just * {margin: 0} but it is not 100% correct and might make bugs with positioning. So I used a popular Eric Meyer's tool here.
+@import '_reset'
+
+// I had checked everything with the Pixel Perfect. The problem is that the layout for desktop (MAYBE!) is too wide. Anyway I write down main background url (this big girl) and fallback gradient & color which is the same as in the picture.    
+body
+    // I could use just a gradient but it takes too much code to replay as in the pic. So I decided to use gradient as a fallback
+    background: url("../img/bg.png") no-repeat, 
+    linear-gradient(to bottom, #0b000f 0%,#080008 56%,#0b000f 99%), #0b000f
+    color: white // color for 'alt' attributes (another text tags have their own color)
+
+// Easily divide the page to 3 logical sections using flexbox.
+.container
+    display: flex
+
+// I decided to separate all logical sections to make the development more convenient.
+// underscore tells Live Sass Compiler that it should concatenate this file with main file (style.sass)
+// only style.sass actually compiles into style.css
+
+@import '_parts/_logo'
+@import '_parts/_poster'
+@import '_parts/_interaction'
+
+// Media queries files
+@import '_media/_media'

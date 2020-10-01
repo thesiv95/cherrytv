@@ -1,0 +1,18 @@
+$maxWidth: 640px // we might change it
+
+@media (max-width: $maxWidth)
+    body
+        height: 100%
+        background: linear-gradient(to bottom, #13041c 0%, #411025 15%, #411025 30%, #13041c 45%, #411025 110%, #270619 55%, #411025 95%),#13041c // gradient the same color as poster image, part 1
+    
+    .container
+        width: $maxWidth
+        display: flex
+        flex-flow: wrap // a flex feature to change sections order easily
+        flex-direction: column // vertical align of the sections
+
+    // Again, logical sections are separated...
+    @import '_parts/_logo'
+    @import '_parts/_poster'
+    @import '_parts/_interaction'
+    
