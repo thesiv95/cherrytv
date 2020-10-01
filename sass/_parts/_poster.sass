@@ -1,3 +1,13 @@
 .poster
-    flex: 0.3
-    visibility: hidden // hide an img tag (for mobile version), but there is still a space for this div 
+    flex: 0.4
+    position: relative
+    left: 80px
+    //visibility: hidden // hide an img tag (for mobile version), but there is still a space for this div 
+    &_image
+        width: 813px
+        height: 1080px
+        z-index: 2
+        &--desktop
+            display: block
+        &--mobile
+            display: none

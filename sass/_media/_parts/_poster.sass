@@ -3,7 +3,11 @@
     flex: 0.2
     order: 2
     margin-top: 103px // make 'interaction' section higher
-    visibility: visible // show an img tag (for mobile version)
+    //visibility: visible // show an img tag (for mobile version)
     &_image
         width: 101% // gradient the same color as poster image, part 2
         overflow-x: hidden
+        &--desktop
+            display: none
+        &--mobile
+            display: block
