@@ -1,4 +1,4 @@
-// I don't use modern syntax because it is for old browsers
+// I don't use modern syntax here because it is for old browsers
 window.onload = function () {
   var M = Modernizr;
   var msg =
