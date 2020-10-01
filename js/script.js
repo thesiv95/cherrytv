@@ -1,4 +1,9 @@
-// Shows layout type every time we change the window size
-window.addEventListener("resize", () => {
-  console.log(window.outerWidth <= 640 ? "mobile" : "desktop");
-});
+// I don't use modern syntax because it is for old browsers
+window.onload = function () {
+  var M = Modernizr;
+  var msg =
+    "You are using an outdated browser. The website could not work properly. You have been warned! (:";
+  if (!M.cssgradients || !M.mediaqueries || !M.flexbox) {
+    alert(msg);
+  }
+};
